@@ -54,6 +54,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-angular-file-loader');
 
     // Default task(s).
-    grunt.registerTask('start', ['angularFileLoader', 'unitTests', 'karma', 'connect:server']);
+    //'karma',
+    grunt.registerTask('start', ['angularFileLoader', 'unitTests', 'connect:server']);
 
 };
