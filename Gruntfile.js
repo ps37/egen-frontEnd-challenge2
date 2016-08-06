@@ -54,15 +54,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-angular-file-loader');
 
     // Default task(s).
-    grunt.registerTask('start', ['angularFileLoader', 'connect:server']);
+    grunt.registerTask('start', ['angularFileLoader', 'unitTests', 'karma', 'connect:server']);
 
 };
-
-//grunt.loadNpmTasks('grunt-contrib-watch');
-//watch: {
-//    //run unit tests with karma (server needs to be already running)
-//    karma: {
-//        files: ['app/view*/**/*.js'],
-//            tasks: ['karma:unit:run'] //NOTE the :run flag
-//    }
-//}
