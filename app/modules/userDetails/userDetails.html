@@ -1,0 +1,56 @@
+<div class="container-fluid outerContainerDiv">
+
+    <div class="container-fluid">
+        <h2 class="pull-left">User Details</h2>
+
+        <button type="button" class="btn btn-default btn-lg pull-right" ng-click="userDetailsCtrl.goBack()">
+            <i class="fa fa-chevron-left" aria-hidden="true"></i>back
+        </button>
+    </div>
+
+    <div class="container-fluid innerContainerDiv">
+
+        <div class="col-sm-6 col-md-6 col-lg-6">
+            <!--details go here-->
+            <section class="userDetail">
+                <div>Name</div>
+                <div>{{userDetailsCtrl.userDetails.firstName}} {{userDetailsCtrl.userDetails.lastName}}</div>
+            </section>
+
+            <section class="userDetail">
+                <div>Email</div>
+                <div>{{userDetailsCtrl.userDetails.email}}</div>
+            </section>
+
+            <section class="userDetail">
+                <div>Address</div>
+                <div>{{userDetailsCtrl.userDetails.address.street}}</div>
+                <div>{{userDetailsCtrl.userDetails.address.city}}</div>
+                <div>{{userDetailsCtrl.userDetails.address.state}}</div>
+                <div>{{userDetailsCtrl.userDetails.address.country}} {{userDetailsCtrl.userDetails.address.zip}}</div>
+            </section>
+
+            <section class="userDetail">
+                <div>Company</div>
+                <div>{{userDetailsCtrl.userDetails.company.name}}
+                    <a href="{{userDetailsCtrl.userDetails.company.website}}" target="_blank">
+                        {{userDetailsCtrl.userDetails.company.website}}</a>
+                </div>
+            </section>
+
+            <button type="button" class="btn btn-default btn-lg" ng-click="userDetailsCtrl.deleteUser()">
+                Delete User
+            </button>
+
+        </div>
+
+        <div class="col-sm-6 col-md-6 col-lg-6">
+            <!--image goes here-->
+            <div id="largeProfilePic">
+                <img ng-src="{{userDetailsCtrl.userDetails.profilePic}}">
+            </div>
+        </div>
+
+    </div>
+
+</div>

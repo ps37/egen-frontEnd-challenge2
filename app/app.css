@@ -1,0 +1,103 @@
+
+body{
+  background-color: rgb(231, 231, 231);
+  font-family: 'Lato';
+}
+
+nav.navbar{
+  background-color: white;
+  height: 60px;
+  -webkit-box-shadow: 0 4px 6px -4px #222;
+  -moz-box-shadow: 0 4px 6px -4px #222;
+  box-shadow: 0 4px 6px -4px #222;
+}
+
+#egenNavHeader, #userListView{
+  padding: 0 40px;
+}
+
+#egenNavHeader>i{
+  padding-top: 5px;
+  color: #ff6600;
+  cursor: pointer;
+}
+
+#egenNavHeader>a{
+  padding-top: 5px;
+}
+
+#egenNavHeader img{
+  width: 45px;
+  height: 45px;
+}
+
+.outerContainerDiv button{
+  background-color: transparent;
+  color: #ff6600;
+  border: 2px solid #ff6600;
+}
+
+.innerContainerDiv{
+  background-color: white;
+  padding: 0px;
+}
+
+#userTable th{
+  color: #ff6600;
+  font-size: large;
+  border-bottom: 2px solid #ff6600;
+  text-align: center;
+}
+
+.innerContainerDiv thead>tr{
+  height: 50px;
+}
+
+.innerContainerDiv tbody>tr{
+  height: 60px;
+  cursor: pointer;
+}
+
+.innerContainerDiv tbody>tr>td{
+  font-size: large;
+  text-align: center;
+  border-bottom: 1px solid #ff6600;
+}
+
+figure{
+  width:50px;
+  height:50px;
+  border: 1px solid #ff6600;
+  border-radius:50%;
+  overflow:hidden;
+}
+
+.innerContainerDiv>div.col-sm-6{
+  padding:30px;
+}
+
+.userDetail{
+  margin-bottom: 20px;
+}
+
+.userDetail>div{
+  font-size: large;
+}
+
+.userDetail>div:first-child{
+  font-weight: bold;
+  color: #ff6600;
+}
+
+#largeProfilePic{
+  width: 500px;
+  height:500px;
+  border: 6px solid #ff6600;
+  overflow:hidden;
+  margin: 0 auto;
+}
+
+.innerContainerDiv button{
+  background-color: #ff6600;
+  color: white;
+}
