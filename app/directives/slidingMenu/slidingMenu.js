@@ -1,10 +1,10 @@
 "use strict";
 
 angular.module('app.directives')
-    .directive('egenNavHeader', function () {
+    .directive('slidingMenu', function () {
         return {
             restrict: 'AE',
-            templateUrl: "../app/directives/egenNavHeader/egenNavHeader.html",
+            templateUrl: "../app/directives/slidingMenu/slidingMenu.html",
             replace: true
         };//directive definition object
     });

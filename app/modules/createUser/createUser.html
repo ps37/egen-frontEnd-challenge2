@@ -1,0 +1,110 @@
+<section class="container-fluid outerContainerDiv">
+
+    <div class="container-fluid">
+        <h2 class="pull-left">Add User</h2>
+
+        <button type="button" class="btn btn-default btn-lg pull-right" ng-click="createUserCtrl.goBack()">
+            <i class="fa fa-chevron-left" aria-hidden="true"></i>back
+        </button>
+    </div>
+
+    <div class="container-fluid innerContainerDiv" id="userForm">
+        <form novalidate role="form" name="userForm">
+
+            <div class="row">
+
+                <div class="form-group col-xs-6">
+                    <label for="firstName">First Name</label>
+                    <input type="text" class="form-control" id="firstName" name="firstName" placeholder="firstName"
+                           ng-model="createUserCtrl.details.firstName" required
+                           ng-class="{ 'has-error' : userForm.firstName.$invalid && userForm.$submitted }"/>
+
+                    <div ng-messages="userForm.firstName.$error"
+                         ng-if="userForm.firstName.$invalid && userForm.$submitted">
+                        <span ng-message="required" class="help-block">*First Name is required</span>
+                    </div>
+                </div>
+
+                <div class="form-group col-xs-6">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName" placeholder="lastName"
+                           ng-model="createUserCtrl.details.lastName" required
+                           ng-class="{ 'has-error' : userForm.lastName.$invalid && userForm.$submitted }"/>
+
+                    <div ng-messages="userForm.lastName.$error"
+                         ng-if="userForm.lastName.$invalid && userForm.$submitted">
+                        <span ng-message="required" class="help-block">*Last Name is required</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email <i class="fa fa-envelope-o"></i></label>
+                <input name="email" ng-model="createUserCtrl.details.email" type="email" class="form-control" id="email"
+                       required="" placeholder="example@domain.com"
+                       ng-class="{ 'has-error' : userForm.email.$invalid && userForm.$submitted }"/>
+
+                <div ng-messages="userForm.email.$error">
+                    <span ng-message="required" class="help-block" ng-if="userForm.email.$error.required && userForm.$submitted">
+                        *Email is required</span>
+                    <span ng-message="email" class="help-block" ng-if="userForm.email.$invalid && userForm.$submitted">
+                        *Email is invalid</span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-xs-6">
+                    <label for="streetAddress">Street Address</label>
+                    <input type="text" class="form-control" id="streetAddress" name="streetAddress" placeholder="streetAddress"
+                           ng-model="createUserCtrl.details.address.street" required
+                           ng-class="{ 'has-error' : userForm.streetAddress.$invalid && userForm.$submitted }"/>
+
+                    <div ng-messages="userForm.streetAddress.$error"
+                         ng-if="userForm.streetAddress.$invalid && userForm.$submitted">
+                        <span ng-message="required" class="help-block">*Street Address is required</span>
+                    </div>
+                </div>
+
+                <div class="form-group col-xs-6">
+                    <label for="city">City</label>
+                    <input type="text" class="form-control" id="city" name="city" placeholder="city"
+                           ng-model="createUserCtrl.details.address.city" required
+                           ng-class="{ 'has-error' : userForm.city.$invalid && userForm.$submitted }"/>
+
+                    <div ng-messages="userForm.city.$error"
+                         ng-if="userForm.city.$invalid && userForm.$submitted">
+                        <p ng-message="required" class="help-block">*City is required</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="form-group col-xs-6">
+                    <label for="companyName">Company Name</label>
+                    <input type="text" class="form-control" id="companyName" name="companyName" placeholder="companyName"
+                           ng-model="createUserCtrl.details.company.name" required
+                           ng-class="{ 'has-error' : userForm.companyName.$invalid && userForm.$submitted }"/>
+
+                    <div ng-messages="userForm.companyName.$error"
+                         ng-if="userForm.companyName.$invalid && userForm.$submitted">
+                        <p ng-message="required" class="help-block">*Company Name is required</p>
+                    </div>
+                </div>
+                <div class="form-group col-xs-6">
+                    <label for="webSite">Web Site</label>
+                    <input name="webSite" ng-model="createUserCtrl.details.company.webSite" type="text" class="form-control"
+                           id="webSite" placeholder="eg: www.abc.com"/>
+                </div>
+            </div>
+
+            <div class="text-center" id="addUserButton">
+                <button type="submit" class="btn btn-default btn-lg"
+                        ng-click="createUserCtrl.create(userForm.$valid)">Add
+                </button>
+            </div>
+
+        </form>
+    </div>
+</section>

@@ -12,6 +12,7 @@ function userListController($state, $stateParams, userListDAL, customStorage){
     userListCtrl.userProfiles = [];
     //function defs
     userListCtrl.viewUserDetails = viewUserDetails;
+    userListCtrl.createUser = createUser;
 
     if($stateParams.fetchFromServer){
         //fetch fresh from the server
@@ -31,5 +32,9 @@ function userListController($state, $stateParams, userListDAL, customStorage){
         customStorage.setUserDetails(userDetails);
         console.log(customStorage.getUserDetails());
         $state.go('userDetails');
+    }
+
+    function createUser(){
+        $state.go('createUser');
     }
 }

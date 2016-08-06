@@ -11,7 +11,7 @@ function userDetailsController($state, $stateParams, userDetailsDAL, customStora
     userDetailsCtrl.deleteUser = deleteUser;
     userDetailsCtrl.goBack = goBack;
 
-    if (Object.keys(userDetails).length === 0) $state.go('userList', {fetchFromServer:false});
+    if (Object.keys(userDetails).length === 0) $state.go('userList', {fetchFromServer:true});
 
     userDetailsCtrl.userDetails = userDetails;
 

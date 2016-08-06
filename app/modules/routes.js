@@ -27,7 +27,12 @@
                         return customStorage.getUserDetails();
                     }
                 }
+            })
+            .state('createUser', {
+                url: '/createUser',
+                templateUrl: '../app/modules/createUser/createUser.html',
+                controller: 'createUserController',
+                controllerAs: 'createUserCtrl'
             });
-
     }
 })();

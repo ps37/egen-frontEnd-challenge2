@@ -72,26 +72,23 @@ figure{
   overflow:hidden;
 }
 
-.innerContainerDiv>div.col-sm-6{
+.innerContainerDiv{
   padding:30px;
+  font-size: large;
 }
 
 .userDetail{
   margin-bottom: 20px;
 }
 
-.userDetail>div{
-  font-size: large;
-}
-
-.userDetail>div:first-child{
+.userDetail>div:first-child, #userForm label{
   font-weight: bold;
   color: #ff6600;
 }
 
 #largeProfilePic{
   width: 500px;
-  height:500px;
+  height:480px;
   border: 6px solid #ff6600;
   overflow:hidden;
   margin: 0 auto;
@@ -100,4 +97,59 @@ figure{
 .innerContainerDiv button{
   background-color: #ff6600;
   color: white;
+}
+
+.help-block {
+  color: rgb(222, 67, 67);
+  font-weight: 500;
+  font-size: small;
+}
+
+input.has-error{
+  border-color: rgb(222, 67, 67);
+  background-color: rgba(238, 69, 69, 0.21);
+  box-shadow: 0 0 5px rgb(222, 67, 67);
+}
+
+.menu-off{
+  left:100vw;
+}
+
+/* The side navigation menu */
+.menu-on {
+  height: 100%; /* 100% Full-height */
+  top: 0;
+  left: 75vw; /* 0 width - change this fromm 100 when off*/
+  width: 25%; /* 0 width - change this from 0 when off*/
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  background-color: rgba(85, 93, 104, 0.95); /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 10px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+#menuHeading{
+  padding: 8px 8px 8px 25px;
+  font-weight: bold;
+  color: #ff6600;
+}
+
+/* The navigation menu links */
+.menu-on a {
+  padding: 10px 10px 10px 25px;
+  font-size: 25px;
+  color: white;
+  display: block;
+  border-bottom: 2px solid white;
+}
+
+.navHead{
+  margin-right: 0px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+.slideNavHead {
+  margin-right: 25%;
+  transition: margin-right .5s;
 }

@@ -22,7 +22,7 @@ module.exports = function(grunt) {
         connect:{
             server: {
                 options: {
-                    base: 'app',
+                    base: 'egen-fe-challenge-master',
                     port: 8000,
                     keepalive: true,
                     app: 'Google chrome',
@@ -54,7 +54,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-angular-file-loader');
 
     // Default task(s).
-    grunt.registerTask('start', ['unitTests', 'karma', 'connect:server']);
+    grunt.registerTask('start', ['angularFileLoader', 'connect:server']);
 
 };
 

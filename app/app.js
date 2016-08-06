@@ -7,20 +7,22 @@ angular.module('app.services', [
     'app.data'
 ]);
 
-// Declare app level module which depends on views, and components
 angular.module('app', [
     'ui.router',
     'app.directives',
     'app.controllers',
     'app.services'
 ])
+.controller("mainController", ['$scope', '$state', function ($scope, $state) {
+    var mainCtrl = this;
 
-    .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
-        //$urlRouterProvider.otherwise('/userList');
-    }])
+    $state.go('userList');
 
-    .controller("mainController", ['$scope', '$state', function ($scope, $state) {
-        var mainCtrl = this;
+    mainCtrl.showMenu = false;
+    mainCtrl.toggleMenu = toggleMenu;
 
-        $state.go('userList');
-    }]);
+    function toggleMenu(){
+      mainCtrl.showMenu = !mainCtrl.showMenu;
+    };
+
+}]);

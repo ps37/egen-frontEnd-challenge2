@@ -5,6 +5,7 @@
             <img src="https://egen.solutions/images/egen-logo.png">
         </a>
         <!--hamburger menu-->
-        <i class="fa fa-bars fa-3x pull-right" aria-hidden="true"></i>
+        <i class="fa fa-bars fa-3x pull-right navHead" aria-hidden="true" ng-click="mainCtrl.toggleMenu()" ng-show="!mainCtrl.showMenu"></i>
+        <i class="fa fa-times fa-3x pull-right slideNavHead" aria-hidden="true" ng-click="mainCtrl.toggleMenu()" ng-show="mainCtrl.showMenu"></i>
     </div><!-- /.container-fluid -->
 </nav>
