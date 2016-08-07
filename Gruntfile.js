@@ -20,14 +20,14 @@ module.exports = function(grunt) {
             }
         },
         connect:{
-            server: {
+            dev: {
                 options: {
-                    base: 'egen-fe-challenge-master',
-                    port: 8000,
+                    base: 'app',
+                    port: 9000,
                     keepalive: true,
                     app: 'Google chrome',
                     open: {
-                        target: 'http://localhost:8000'
+                        target: 'http://localhost:9000'
                     }
                 }
             }
@@ -55,6 +55,6 @@ module.exports = function(grunt) {
 
     // Default task(s).
     //'karma',
-    grunt.registerTask('start', ['angularFileLoader', 'unitTests', 'connect:server']);
+    grunt.registerTask('start', ['angularFileLoader', 'unitTests', 'karma', 'connect:dev']);
 
 };

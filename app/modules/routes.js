@@ -12,14 +12,14 @@
         $stateProvider
             .state('userList', {
                 url: '/userList',
-                templateUrl: '../app/modules/userList/userList.html',
+                templateUrl: 'modules/userList/userList.html',
                 controller: 'userListController',
                 controllerAs: 'userListCtrl',
                 params: {fetchFromServer: true}
             })
             .state('userDetails', {
                 url: '/userDetails',
-                templateUrl: '../app/modules/userDetails/userDetails.html',
+                templateUrl: 'modules/userDetails/userDetails.html',
                 controller: 'userDetailsController',
                 controllerAs: 'userDetailsCtrl',
                 resolve:{
@@ -30,7 +30,7 @@
             })
             .state('createUser', {
                 url: '/createUser',
-                templateUrl: '../app/modules/createUser/createUser.html',
+                templateUrl: 'modules/createUser/createUser.html',
                 controller: 'createUserController',
                 controllerAs: 'createUserCtrl'
             });
